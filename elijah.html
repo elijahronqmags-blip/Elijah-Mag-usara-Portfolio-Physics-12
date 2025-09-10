@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elijah R. Mag-usara — Member Profile</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Calibri, Arial, sans-serif;
+      background-image: url("Images/teen_titans_go_background_new.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      color: #000;
+    }
+
+    header {
+      background: rgba(10, 61, 98, 0.9);
+      padding: 15px 30px;
+      text-align: center;
+      color: white;
+      font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+    }
+
+    main {
+      display: flex;
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .profile-img {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    /* Raven image: border/background/glow removed */
+    .profile-img img {
+      width: 250px;
+      border-radius: 12px;
+      background: transparent; /* removed background */
+      padding: 0;               /* removed padding */
+      box-shadow: none;         /* removed glow/shadow */
+      border: none;             /* ensure no border */
+      display: block;
+    }
+
+    .profile-info {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .info-box {
+      background: rgba(50, 50, 50, 0.8); /* subtle grey */
+      border: 2px solid #39ff14;         /* green border */
+      border-radius: 10px;
+      padding: 16px;
+      line-height: 1.6;
+      font-size: 1rem;
+      box-shadow: 0 0 12px #39ff14;
+      color: #f0f0f0;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      color: #39ff14;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin-top: 0;
+      color: #39ff14;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(10, 61, 98, 0.9);
+      color: #39ff14;
+      margin-top: 30px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      background: linear-gradient(45deg, #39ff14, #2ecc40);
+      color: #0a0f1a;
+      font-weight: bold;
+    }
+
+    .back-btn:hover {
+      background: linear-gradient(45deg, #2ecc40, #27ae60);
+      color: #fff;
+    }
+
+    /* Responsive tweak */
+    @media (max-width: 800px) {
+      main { flex-direction: column; align-items: center; }
+      .profile-img, .profile-info { width: 100%; }
+      .profile-img img { width: 220px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Member Profile</h2>
+  </header>
+
+  <main>
+    <!-- Left: Character Image -->
+    <div class="profile-img">
+      <img src="Images/Raven.png" alt="Elijah (Raven)">
+    </div>
+
+    <!-- Right: Info Boxes -->
+    <div class="profile-info">
+      <div class="info-box">
+        <h1>Elijah R. Mag-usara ✍️</h1>
+        <p>
+          As a scribe, Elijah embodies the meticulous and observant nature of Raven. 
+          He is not one for frivolous chatter; instead, he operates with a quiet, 
+          focused intensity. This allows him to document every detail of a physics 
+          experiment with precision. Much like Raven’s control over her powers, Elijah 
+          maintains a composed demeanor, ensuring that his notes and photographs are 
+          free from the chaos of a busy lab. He’s the one who notices the subtle shifts 
+          in a measurement or the precise moment a reaction occurs, capturing these 
+          “magical” moments of science.
+        </p>
+      </div>
+
+      <div class="info-box">
+        <p>
+          Just as Raven’s incantation, <em>“Azarath Metrion Zinthos”</em>, brings her powers 
+          into focus, Elijah’s structured approach to documentation ensures that nothing is missed. 
+          He methodically records data, sketches diagrams, and takes pictures, turning what could 
+          be a jumble of observations into a clear, concise record of the experiment’s journey. 
+          His work provides the solid, reliable foundation needed to analyze the results and draw 
+          accurate conclusions, making him an invaluable asset to any group.
+        </p>
+      </div>
+
+      <div class="info-box">
+        <h3>Skills | Hobbies</h3>
+        <ul>
+          <li>Full Stack Web Developer</li>
+          <li>Loves Pet and Boba Milk Tea</li>
+          <li>The “Nonchalant Kid” when everything goes wrong in the IKEA group</li>
+        </ul>
+      </div>
+
+      <a href="index.html" class="back-btn">⬅ Back to Portfolio</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Elijah Mag-usara — Portfolio Project</p>
+  </footer>
+</body>
+</html>

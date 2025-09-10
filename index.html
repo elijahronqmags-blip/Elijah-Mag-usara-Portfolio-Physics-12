@@ -6,15 +6,15 @@
   <title>Elijah Mag-usara — IKEA Physics Portfolio</title>
   <style>
     body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-image: url("Images/teen_titans_go_background_new.png");
-  background-size: cover;       
-  background-repeat: no-repeat; 
-  background-attachment: fixed; 
-  background-position: center;  
-  color: #000000;
-}
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url("Images/teen_titans_go_background_new.png");
+      background-size: cover;       
+      background-repeat: no-repeat; 
+      background-attachment: fixed; 
+      background-position: center;  
+      color: #000000;
+    }
 
     /* Header as Navbar */
     header {
@@ -65,6 +65,7 @@
       font-weight: bold;
       cursor: pointer;
       transition: all 0.3s ease;
+      user-select: none;
     }
     .nav-buttons button:hover {
       background: #39ff14;
@@ -93,28 +94,36 @@
       font-family: "Arial Rounded MT Bold", Arial, sans-serif;
     }
 
-    /* About Me box */
-    .about-box {
+    /* Glowing box (default green) */
+    .glow-box {
       background: rgba(18, 26, 43, 0.9);
       color: #eee;
-      padding: 20px;
+      padding: 24px;
       border-radius: 12px;
-      border: 2px solid navy;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      border: 2px solid #39ff14;
+      box-shadow: 0 0 12px #39ff14;
       line-height: 1.6;
+      text-align: center;
+      font-size: 1.1rem;
+      font-family: "Arial Rounded MT Bold", Arial, sans-serif;
     }
 
-    /* Project cards and Functions */
+    /* Projects section glow (override to red) */
+    .project.glow-box {
+      background: rgba(18, 26, 43, 0.9);
+      border: 2px solid red;
+      box-shadow: 0 0 12px red;
+      text-align: left;
+    }
+
+    /* Project cards grid */
     .project-list {
       display: grid;
       gap: 16px;
     }
     .project {
-      background: rgba(18, 26, 43, 0.9);
-      color: #eee;
       padding: 16px;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     .project h3 {
       margin: 0 0 8px;
@@ -152,6 +161,11 @@
 
     /* Locked project style */
     .locked {
+      background: rgba(18, 26, 43, 0.9);
+      color: #eee;
+      padding: 16px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       opacity: 0.6;
       text-align: center;
     }
@@ -255,10 +269,11 @@
 
     <!-- Center logo -->
     <div class="header-center">
-      <img src="Images/TeenTitansGo.png.png" alt="Logo" class="logo"> <!-- ✅ renamed -->
+      <img src="Images/TeenTitansGo.png.png" alt="Logo" class="logo">
     </div>
 
     <div class="nav-buttons">
+      <button data-target="introduction">Main Page</button>
       <button data-target="projects">Projects & Activities</button>
       <button data-target="members">Members</button>
       <button data-target="about">About Me</button>
@@ -267,26 +282,37 @@
   </header>
 
   <main>
+    <!-- Introduction Section -->
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <div class="glow-box">
+        <p>
+           Hello, my name is Elijah R. Mag-usara, and I'm a student in 12 - Generosity. 
+           I created this digital portfolio to present our Group work activities that we completed for Physics 12 to reflect our understanding and track progress in this subject.
+        </p>
+      </div>
+    </section>
+
     <!-- Projects Section -->
     <section id="projects">
       <h2>Projects & Activities</h2>
       <div class="project-list">
-        <div class="project">
+        <div class="project glow-box">
           <h3>Uncertainty of Measurement🔑</h3>
           <p>
             An uncertainty of measurement experiment in physics determines how reliable and precise a measurement is by estimating the possible error or range within which the true value lies.
-          </p>
-          <button class="btn ripple">View Project</button>
+          </p> 
+          <button class="btn ripple" onclick="location.href='project1.html'">View Project</button>
         </div>
-        <div class="project">
+        <div class="project glow-box">
           <h3>Measurements Using A Vernier Caliper and Micrometer🔑</h3>
           <p>
             Measuring and determining an object’s length, diameter, or thickness with high precision by reading scales designed for very small divisions using Vernier Caliper and Micrometer.
           </p>
-          <button class="btn ripple">View Project</button>
+          <button class="btn ripple" onclick="location.href='project2.html'">View Project</button>
         </div>
 
-        <!-- Locked projects Section-->
+        <!-- Locked projects (no glow) -->
         <div class="project locked">
           <h3>Locked</h3>
           <button class="btn">Coming Soon</button>
@@ -302,32 +328,32 @@
       </div>
     </section>
 
-    <!-- Members Section Section -->
+    <!-- Members Section -->
     <section id="members">
       <h2>Members of IKEA Group</h2>
       <div class="members-grid">
         <div class="member-card">
-          <img src="Images/Raven.png.png" alt="Elijah" class="member-img"> <!-- ✅ shorter name -->
+          <img src="Images/Raven.png.png" alt="Elijah" class="member-img">
           <div class="member-info">
-            <p><strong>Elijah R. Mag-usara</strong><br><em>Scriber ✍️</em></p>
+            <p><strong><a href="elijah.html" style="color:#39ff14; text-decoration:none;">Elijah R. Mag-usara</a></strong><br><em>Scriber ✍️</em></p>
           </div>
         </div>
         <div class="member-card">
           <img src="Images/Starfire.png.png" alt="Ianna" class="member-img">
           <div class="member-info">
-            <p><strong>Ianna Fe Alferez</strong><br><em>Skipper 🚀</em></p>
+            <p><strong><a href="ianna.html" style="color:#39ff14; text-decoration:none;">Ianna Fe Alferez</a></strong><br><em>Skipper 🚀</em></p>
           </div>
         </div>
         <div class="member-card">
           <img src="Images/Robin.png.png" alt="Kurt" class="member-img">
           <div class="member-info">
-            <p><strong>Kurt Yohan Del Corro</strong><br><em>Cracker 💥</em></p>
+            <p><strong><a href="kurt.html" style="color:#39ff14; text-decoration:none;">Kurt Yohan Del Corro</a></strong><br><em>Cracker 💥</em></p>
           </div>
         </div>
         <div class="member-card">
           <img src="Images/Beastboy.png.png" alt="Arthur" class="member-img">
           <div class="member-info">
-            <p><strong>Arthur Malazarte</strong><br><em>Digger ⚒️</em></p>
+            <p><strong><a href="arthur.html" style="color:#39ff14; text-decoration:none;">Arthur Malazarte</a></strong><br><em>Digger ⚒️</em></p>
           </div>
         </div>
       </div>
@@ -336,7 +362,7 @@
     <!-- About Me Section -->
     <section id="about">
       <h2>About Me</h2>
-      <div class="about-box">
+      <div class="glow-box">
         <p>
           I’m Elijah Mag-usara, a senior high school student and aspiring full-stack web developer with a strong passion for science and technology. 
           This Physics portfolio highlights our collaborative group experiments, projects, and creative works that reflect both my love for coding and scientific exploration🎲.
@@ -386,6 +412,59 @@
     };
     window.addEventListener('scroll', revealOnScroll);
     window.addEventListener('load', revealOnScroll);
+
+    // Navbar buttons (right side) transitions
+    const navButtons = document.querySelectorAll('.nav-buttons button');
+
+    navButtons.forEach(button => {
+      // Hover: smooth background and scale up
+      button.addEventListener('mouseenter', () => {
+        button.style.transition = 'background-color 0.3s ease, transform 0.3s ease';
+        button.style.transform = 'scale(1.05)';
+      });
+      button.addEventListener('mouseleave', () => {
+        button.style.transform = 'scale(1)';
+      });
+
+      // Click: quick scale down and back
+      button.addEventListener('mousedown', () => {
+        button.style.transition = 'transform 0.1s ease';
+        button.style.transform = 'scale(0.95)';
+      });
+      button.addEventListener('mouseup', () => {
+        button.style.transform = 'scale(1.05)';
+      });
+      button.addEventListener('mouseout', () => {
+        button.style.transform = 'scale(1)';
+      });
+    });
+
+    // Projects & Activities buttons transitions
+    const projectButtons = document.querySelectorAll('#projects .btn');
+
+    projectButtons.forEach(button => {
+      // Hover: shift gradient background smoothly
+      button.addEventListener('mouseenter', () => {
+        button.style.transition = 'background 0.4s ease, color 0.4s ease';
+        button.style.background = 'linear-gradient(45deg, #2ecc40, #27ae60)';
+        button.style.color = '#fff';
+      });
+      button.addEventListener('mouseleave', () => {
+        button.style.background = 'linear-gradient(45deg, #39ff14, #2ecc40)';
+        button.style.color = '#0a0f1a';
+      });
+
+      // Click: subtle shadow pulse
+      button.addEventListener('mousedown', () => {
+        button.style.boxShadow = '0 0 12px #27ae60';
+      });
+      button.addEventListener('mouseup', () => {
+        button.style.boxShadow = 'none';
+      });
+      button.addEventListener('mouseout', () => {
+        button.style.boxShadow = 'none';
+      });
+    });
   </script>
 </body>
 </html>

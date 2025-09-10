@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elijah R. Mag-usara — Member Profile</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Calibri, Arial, sans-serif;
+      background-image: url("Images/teen_titans_go_background_new.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      color: #000;
+    }
+
+    header {
+      background: rgba(10, 61, 98, 0.9);
+      padding: 15px 30px;
+      text-align: center;
+      color: white;
+      font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+    }
+
+    main {
+      display: flex;
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .profile-img {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    /* Raven image: border/background/glow removed */
+    .profile-img img {
+      width: 250px;
+      border-radius: 12px;
+      background: transparent; /* removed background */
+      padding: 0;               /* removed padding */
+      box-shadow: none;         /* removed glow/shadow */
+      border: none;             /* ensure no border */
+      display: block;
+    }
+
+    .profile-info {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .info-box {
+      background: rgba(50, 50, 50, 0.8); /* subtle grey */
+      border: 2px solid #39ff14;         /* green border */
+      border-radius: 10px;
+      padding: 16px;
+      line-height: 1.6;
+      font-size: 1rem;
+      box-shadow: 0 0 12px #39ff14;
+      color: #f0f0f0;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      color: #39ff14;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin-top: 0;
+      color: #39ff14;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(10, 61, 98, 0.9);
+      color: #39ff14;
+      margin-top: 30px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      background: linear-gradient(45deg, #39ff14, #2ecc40);
+      color: #0a0f1a;
+      font-weight: bold;
+    }
+
+    .back-btn:hover {
+      background: linear-gradient(45deg, #2ecc40, #27ae60);
+      color: #fff;
+    }
+
+    /* Responsive tweak */
+    @media (max-width: 800px) {
+      main { flex-direction: column; align-items: center; }
+      .profile-img, .profile-info { width: 100%; }
+      .profile-img img { width: 220px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Member Profile</h2>
+  </header>
+
+  <main>
+    <!-- Left: Character Image -->
+    <div class="profile-img">
+      <img src="Images/Beastboy.png.png" alt="Arthur (Beastboy)">
+    </div>
+
+    <!-- Right: Info Boxes -->
+    <div class="profile-info">
+      <div class="info-box">
+        <h1>Arthur Jr Malazarte⚒</h1>
+        <p>
+          As a Digger, Arthur embodies Beast Boy's energetic and adaptable nature. 
+          While Beast Boy can transform into any animal, Arthur transforms information into clear, actionable insights. 
+          He's the one who enthusiastically tackles the research, digging through various sources to find the most relevant data.
+        </p>
+      </div>
+
+      <div class="info-box">
+        <p>
+          His role isn't just about collecting information; it's about interpreting it for the team. Much like Beast Boy's witty one-liners,
+           Arthur has a knack for translating complex physics concepts into easily digestible explanations. He breaks down intimidating research papers and dense data sets, making sure everyone in the group understands the 'why' behind the numbers.
+           Arthur's vibrant energy and ability to quickly shift focus from one topic to another make him the perfect person to analyze a wide range of data and help the team solve problems with a playful yet insightful approach.
+        </p>
+      </div>
+
+      <div class="info-box">
+        <h3>Skills | Hobbies</h3>
+        <ul>
+          <li>The Future Civil Engineer</li>
+          <li>Loves Basketball and Dancing</li>
+          <li>The “quiet kid” in the IKEA group</li>
+        </ul>
+      </div>
+
+      <a href="index.html" class="back-btn">⬅ Back to Portfolio</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Elijah Mag-usara — Portfolio Project</p>
+  </footer>
+</body>
+</html>
