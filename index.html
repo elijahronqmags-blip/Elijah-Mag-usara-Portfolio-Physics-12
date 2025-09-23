@@ -4,6 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Elijah Mag-usara — IKEA Physics Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Images/weblogopng.png">
+
   <style>
     body {
       margin: 0;
@@ -16,7 +20,6 @@
       color: #000000;
     }
 
-    /* Header as Navbar */
     header {
       background: rgba(10, 61, 98, 0.9);
       display: flex;
@@ -103,7 +106,6 @@
       border: 2px solid #39ff14;
       box-shadow: 0 0 12px #39ff14;
       line-height: 1.6;
-      text-align: center;
       font-size: 1.1rem;
       font-family: "Arial Rounded MT Bold", Arial, sans-serif;
     }
@@ -251,6 +253,24 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     }
 
+    /* About layout (text + image) */
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .about-text {
+      flex: 2;
+    }
+    .about-image img {
+      width: 200px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #39ff14;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -287,8 +307,8 @@
       <h2>Welcome To Elijah's Portfolio</h2>
       <div class="glow-box">
         <p>
-           Hello, my name is Elijah R. Mag-usara from 12 - Generosity, I am a Grade 12-Student and I created this Website Portfolio. 
-           I created this digital website portfolio to present our Group work activities that we completed for Physics 12 to track progress in this subject.
+          Hello, my name is Elijah R. Mag-usara from 12 - Generosity, I am a Grade 12-Student and I created this Website Portfolio. 
+          I created this digital website portfolio to present our Group work activities that we completed for Physics 12 to track progress in this subject.
         </p>
       </div>
     </section>
@@ -312,7 +332,7 @@
           <button class="btn ripple" onclick="location.href='project2.html'">View Project</button>
         </div>
 
-        <!-- Locked projects (no glow) -->
+        <!-- Locked projects -->
         <div class="project locked">
           <h3>Locked</h3>
           <button class="btn">Coming Soon</button>
@@ -330,7 +350,7 @@
 
     <!-- Members Section -->
     <section id="members">
-      <h2>Members of IKEA Group</h2>
+      <h2>Current Group|Members (G6-IKEA Group)</h2>
       <div class="members-grid">
         <div class="member-card">
           <img src="Images/Raven.png.png" alt="Elijah" class="member-img">
@@ -362,11 +382,18 @@
     <!-- About Me Section -->
     <section id="about">
       <h2>About Me</h2>
-      <div class="glow-box">
-        <p>
-          I’m Elijah Mag-usara, a senior high school student and aspiring full-stack web developer with a strong passion for science and technology. 
-          This Physics portfolio highlights our collaborative group experiments, projects, and creative works that reflect both my love for coding and scientific exploration🎲.
-        </p>
+      <div class="about-container">
+        <!-- Text -->
+        <div class="glow-box about-text">
+          <p>
+            I’m Elijah Mag-usara, a senior high school student and aspiring full-stack web developer with a strong passion for science and technology. 
+            This Physics portfolio highlights our collaborative group experiments, projects, and creative works that reflect both my love for coding and scientific exploration🎲.
+          </p>
+        </div>
+        <!-- Picture -->
+        <div class="about-image">
+          <img src="Images/elipfp.jpg" alt="Elijah R. Mag-usara">
+        </div>
       </div>
     </section>
 
@@ -400,7 +427,7 @@
       });
     });
 
-    // Reveal member cards when scrolling into view
+    // Reveal member cards on scroll
     const members = document.querySelectorAll('.member-card');
     const revealOnScroll = () => {
       members.forEach(member => {
@@ -413,11 +440,9 @@
     window.addEventListener('scroll', revealOnScroll);
     window.addEventListener('load', revealOnScroll);
 
-    // Navbar buttons (right side) transitions
+    // Navbar button transitions
     const navButtons = document.querySelectorAll('.nav-buttons button');
-
     navButtons.forEach(button => {
-      // Hover: smooth background and scale up
       button.addEventListener('mouseenter', () => {
         button.style.transition = 'background-color 0.3s ease, transform 0.3s ease';
         button.style.transform = 'scale(1.05)';
@@ -425,8 +450,6 @@
       button.addEventListener('mouseleave', () => {
         button.style.transform = 'scale(1)';
       });
-
-      // Click: quick scale down and back
       button.addEventListener('mousedown', () => {
         button.style.transition = 'transform 0.1s ease';
         button.style.transform = 'scale(0.95)';
@@ -439,11 +462,9 @@
       });
     });
 
-    // Projects & Activities buttons transitions
+    // Project button transitions
     const projectButtons = document.querySelectorAll('#projects .btn');
-
     projectButtons.forEach(button => {
-      // Hover: shift gradient background smoothly
       button.addEventListener('mouseenter', () => {
         button.style.transition = 'background 0.4s ease, color 0.4s ease';
         button.style.background = 'linear-gradient(45deg, #2ecc40, #27ae60)';
@@ -453,8 +474,6 @@
         button.style.background = 'linear-gradient(45deg, #39ff14, #2ecc40)';
         button.style.color = '#0a0f1a';
       });
-
-      // Click: subtle shadow pulse
       button.addEventListener('mousedown', () => {
         button.style.boxShadow = '0 0 12px #27ae60';
       });
@@ -468,4 +487,3 @@
   </script>
 </body>
 </html>
-
