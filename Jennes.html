@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elijah R. Mag-usara — Member Profile</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Calibri, Arial, sans-serif;
+      background-image: url("Images/teen_titans_go_background_new.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      color: #000;
+    }
+
+    header {
+      background: rgba(10, 61, 98, 0.9);
+      padding: 15px 30px;
+      text-align: center;
+      color: white;
+      font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+    }
+
+    main {
+      display: flex;
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .profile-img {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    /* Raven image: border/background/glow removed */
+    .profile-img img {
+      width: 250px;
+      border-radius: 12px;
+      background: transparent; /* removed background */
+      padding: 0;               /* removed padding */
+      box-shadow: none;         /* removed glow/shadow */
+      border: none;             /* ensure no border */
+      display: block;
+    }
+
+    .profile-info {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .info-box {
+      background: rgba(50, 50, 50, 0.8); /* subtle grey */
+      border: 2px solid #39ff14;         /* green border */
+      border-radius: 10px;
+      padding: 16px;
+      line-height: 1.6;
+      font-size: 1rem;
+      box-shadow: 0 0 12px #39ff14;
+      color: #f0f0f0;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      color: #39ff14;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin-top: 0;
+      color: #39ff14;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(10, 61, 98, 0.9);
+      color: #39ff14;
+      margin-top: 30px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      background: linear-gradient(45deg, #39ff14, #2ecc40);
+      color: #0a0f1a;
+      font-weight: bold;
+    }
+
+    .back-btn:hover {
+      background: linear-gradient(45deg, #2ecc40, #27ae60);
+      color: #fff;
+    }
+
+    /* Responsive tweak */
+    @media (max-width: 800px) {
+      main { flex-direction: column; align-items: center; }
+      .profile-img, .profile-info { width: 100%; }
+      .profile-img img { width: 220px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Member Profile</h2>
+  </header>
+
+  <main>
+    <!-- Left: Character Image -->
+    <div class="profile-img">
+      <img src="Images/Starfire.png.png" alt="Ianna (Starfire)">
+    </div>
+
+    <!-- Right: Info Boxes -->
+    <div class="profile-info">
+      <div class="info-box">
+        <h1>Jennes Arcaza🚀</h1>
+        <p>
+          As the Skipper of the group, Jennes embodies the focused and disciplined nature of Starfire. 
+          Much like Starfire's rigorous training and powerful combat skills, Ianna leads with a strict hand, ensuring the team stays on task and maintains a high standard of work.
+          She is not a leader who praises frivolously but one who commands respect through her clear expectations and unwavering focus on the end goal.
+        </p>
+      </div>
+
+      <div class="info-box">
+        <p>
+          Just as Starfire learns about Earth's customs, Ianna takes the time to understand each team member's role and hold them accountable. 
+          She organizes the workflow, enforces deadlines, and ensures every step of the physics project is executed with precision. 
+          Her "starbolts" of direct feedback and firm guidance keep the team on a disciplined path, helping them to efficiently and successfully navigate their projects.
+        </p>
+      </div>
+
+      <div class="info-box">
+        <h3>Skills | Hobbies</h3>
+        <ul>
+          <li>Smart but Strict when it comes to Leadership</li>
+          <li>When one member does not follow instructions she will get mad.</li>
+          <li>The “Couragous Leader” in the Mechatronics group</li>
+        </ul>
+      </div>
+
+      <a href="index.html" class="back-btn">⬅ Back to Portfolio</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Elijah Mag-usara — Portfolio Project</p>
+  </footer>
+</body>
+</html>
